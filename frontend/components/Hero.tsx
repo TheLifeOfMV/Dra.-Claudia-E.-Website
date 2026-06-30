@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Link from 'next/link';
+import { WHATSAPP_APPOINTMENT_URL } from '../lib/whatsapp';
 
 const HeroContainer = styled.div`
   display: flex;
@@ -205,9 +205,13 @@ const Hero: React.FC = () => {
           <HeroSubtitle>
           La cirugía con la Dra. Echeverry no solo es precisa, también es humana: cada paciente es tratado con respeto, empatía y dedicación.
           </HeroSubtitle>
-          <Link href="/booking" passHref legacyBehavior>
-            <HeroButton>Agendar Cita</HeroButton>
-          </Link>
+          <HeroButton
+            href={WHATSAPP_APPOINTMENT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Agendar Cita
+          </HeroButton>
         </LeftColumn>
         
         <RightColumn>

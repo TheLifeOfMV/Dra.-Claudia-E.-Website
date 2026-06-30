@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
-import Link from 'next/link';
 import Image from 'next/image';
+import { WHATSAPP_APPOINTMENT_URL } from '../lib/whatsapp';
 
 const ServicesContainer = styled.div`
   max-width: 1200px;
@@ -190,9 +190,13 @@ const ServicesPage = () => {
                   <li>Cirugía de mama</li>
                   <li>Cirugía de tiroides y paratiroides</li>
                 </ul>
-                <Link href="/booking" passHref legacyBehavior>
-                  <CTAButton>Programar una consulta</CTAButton>
-                </Link>
+                <CTAButton
+                  href={WHATSAPP_APPOINTMENT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Programar una consulta
+                </CTAButton>
               </ServiceDescription>
               <ServiceImage style={{ backgroundImage: 'url("/general-surgery.jpg")' }} />
             </ServiceContent>
@@ -235,9 +239,13 @@ const ServicesPage = () => {
                   <li>Less internal scarring and adhesions</li>
                   <li>Reduced blood loss</li>
                 </ul>
-                <Link href="/booking" passHref legacyBehavior>
-                  <CTAButton>Programar una consulta</CTAButton>
-                </Link>
+                <CTAButton
+                  href={WHATSAPP_APPOINTMENT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Programar una consulta
+                </CTAButton>
               </ServiceDescription>
               <ServiceImage style={{ backgroundImage: 'url("/minimally-invasive.jpg")' }} />
             </ServiceContent>
@@ -279,9 +287,13 @@ const ServicesPage = () => {
                   <li>Procedimientos laparoscópicos de bariatricia (pérdida de peso)</li>
                   <li>Diagnóstico laparoscópico</li>
                 </ul>
-                <Link href="/booking" passHref legacyBehavior>
-                  <CTAButton>Programar una consulta</CTAButton>
-                </Link>
+                <CTAButton
+                  href={WHATSAPP_APPOINTMENT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Programar una consulta
+                </CTAButton>
               </ServiceDescription>
               <ServiceImage style={{ backgroundImage: 'url("/laparoscopic.jpg")' }} />
             </ServiceContent>
@@ -324,9 +336,13 @@ const ServicesPage = () => {
                   <li>Hernias ventrales (pared abdominal)</li>
                   <li>Hernias deportivas</li>
                 </ul>
-                <Link href="/booking" passHref legacyBehavior>
-                  <CTAButton>Programar una consulta</CTAButton>
-                </Link>
+                <CTAButton
+                  href={WHATSAPP_APPOINTMENT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Programar una consulta
+                </CTAButton>
               </ServiceDescription>
               <ServiceImage style={{ backgroundImage: 'url("/hernia.jpg")' }} />
             </ServiceContent>
@@ -369,9 +385,13 @@ const ServicesPage = () => {
                   <li>Dyskinesia biliar</li>
                   <li>Vesícula biliar de porcelana</li>
                 </ul>
-                <Link href="/booking" passHref legacyBehavior>
-                  <CTAButton>Programar una consulta</CTAButton>
-                </Link>
+                <CTAButton
+                  href={WHATSAPP_APPOINTMENT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Programar una consulta
+                </CTAButton>
               </ServiceDescription>
               <ServiceImage style={{ backgroundImage: 'url("/gallbladder.jpg")' }} />
             </ServiceContent>

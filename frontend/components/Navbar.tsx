@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import styled, { createGlobalStyle } from 'styled-components';
 import { useRouter } from 'next/router';
+import { WHATSAPP_APPOINTMENT_URL } from '../lib/whatsapp';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -97,7 +98,8 @@ const NavLink = styled.a<{ active?: boolean }>`
   }
 `;
 
-const BookButton = styled.button`
+const BookButton = styled.a`
+  display: inline-block;
   background-color: var(--primary);
   color: var(--neutral);
   border: none;
@@ -108,6 +110,7 @@ const BookButton = styled.button`
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
+  text-decoration: none;
   
   &:hover {
     background-color: var(--primary);
@@ -175,15 +178,23 @@ const Navbar: React.FC = () => {
           <Link href="/contact" passHref legacyBehavior>
             <NavLink active={isActive('/contact')}>Contact</NavLink>
           </Link>
-          <Link href="/booking" passHref legacyBehavior>
-            <NavLink active={isActive('/booking')}>Book Appointment</NavLink>
-          </Link>
+          <BookButton
+            href={WHATSAPP_APPOINTMENT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Agendar Cita
+          </BookButton>
         </MobileNavLinks>
         
         <div>
-          <Link href="/booking" passHref legacyBehavior>
-            <BookButton>Agendar Cita</BookButton>
-          </Link>
+          <BookButton
+            href={WHATSAPP_APPOINTMENT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Agendar Cita
+          </BookButton>
           <MobileMenuButton onClick={toggleMobileMenu}>
             {mobileMenuOpen ? '✕' : '☰'}
           </MobileMenuButton>

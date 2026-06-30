@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { WHATSAPP_APPOINTMENT_URL } from '../lib/whatsapp';
 
 const FooterContainer = styled.footer`
   background-color: ${props => props.theme.colors.secondary};
@@ -114,9 +115,13 @@ const Footer: React.FC = () => {
           <Link href="/contact" passHref legacyBehavior>
             <FooterLink>Contacto</FooterLink>
           </Link>
-          <Link href="/booking" passHref legacyBehavior>
-            <FooterLink>Agendar Cita</FooterLink>
-          </Link>
+          <FooterLink
+            href={WHATSAPP_APPOINTMENT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Agendar Cita
+          </FooterLink>
         </FooterColumn>
         
         <FooterColumn>
